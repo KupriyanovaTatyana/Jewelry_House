@@ -1,0 +1,37 @@
+ErrorDocument 403 /page20137918.html
+ErrorDocument 404 /page20137918.html
+
+DirectoryIndex page19988665.html
+
+RewriteEngine On
+
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule ^(.*)$ https://gold-union-jewelry\.ru/$1 [R=301,L]
+
+RewriteCond %{HTTP:X-Forwarded-Proto} =https
+RewriteCond %{HTTP_HOST} ^www\.gold-union-jewelry.ru [NC]
+RewriteRule ^(.*)$ https://gold-union-jewelry\.ru/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} /robots.txt
+RewriteCond "%{DOCUMENT_ROOT}/robots_%{HTTP_HOST}.txt" -f
+RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
+RewriteRule ^variant$ page19988665.html [NC]
+RewriteRule ^variant/$ page19988665.html [NC]
+
+RewriteRule ^quiz$ page19993126.html [NC]
+RewriteRule ^quiz/$ page19993126.html [NC]
+
+RewriteRule ^policy$ page19969182.html [NC]
+RewriteRule ^policy/$ page19969182.html [NC]
+
+RewriteRule ^thanks$ page20137708.html [NC]
+RewriteRule ^thanks/$ page20137708.html [NC]
+
+RewriteRule ^error$ page20137918.html [NC]
+RewriteRule ^error/$ page20137918.html [NC]
+
+RewriteRule ^thanks2$ page20139789.html [NC]
+RewriteRule ^thanks2/$ page20139789.html [NC]
+
+RewriteRule ^favicon.ico$ https://static.tildacdn.com/tild6238-3733-4830-a363-333763643131/favicon.ico [R=302,L]
+
